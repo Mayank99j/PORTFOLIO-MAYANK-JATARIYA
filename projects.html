@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Projects | Mayank Jatariya</title>
+    <link rel="stylesheet" href="output.css">
+    <style>
+        /* Same styles as index.html */
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: #3B82F6;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .project-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-yellow-200 text-gray-800 font-sans">
+    <!-- Navigation (same as index.html) -->
+    <header class="bg-yellow-200 shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <nav class="flex justify-between items-center py-4">
+                <a href="index.html" class="text-2xl font-bold text-blue-600">MJ</a>
+                
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="projects.html" class="nav-link text-blue-600 font-semibold">Projects</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </div>
+                
+                <button class="md:hidden text-blue-600">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="py-16">
+        <div class="container mx-auto px-4">
+            <h1 class="text-4xl font-bold text-center mb-12 text-blue-700">My Projects</h1>
+            
+            <!-- Projects Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="project-card bg-white rounded-lg overflow-hidden shadow-md">
+                    <video src="assest/smorphi video.mp4" autoplay loop controls class="w-full h-48 object-cover"></video>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Smorphi Bot</h3>
+                        <p class="text-gray-600 mb-4">A bot that build as a prototype , which can change its configuration and remotely operatable.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Sensors</span>
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">ESP32</span>
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Mechanics</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="project-card bg-white rounded-lg overflow-hidden shadow-md">
+                    <img src="assest/local seva image.jpg" alt="Local seva image" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Local seva</h3>
+                        <p class="text-gray-600 mb-4">A website which is used to connect people with the local household service providers.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">HTML</span>
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">CSS</span>
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">API</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="project-card bg-white rounded-lg overflow-hidden shadow-md">
+                    <img src="assest/solar bot .jpg.jpg" alt="Solar Bot image" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Solar Bot</h3>
+                        <p class="text-gray-600 mb-4">A bot that helps to clean the solar panel in arid areas .</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Sensors</span>
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Aurdino</span>
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Mechanics</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 4 -->
+                <div class="project-card bg-white rounded-lg overflow-hidden shadow-md">
+                    <img src="assest/blog pic.jpg" alt="Blog Platform image" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Blog Platform (Dummy)</h3>
+                        <p class="text-gray-600 mb-4">A simple blog platform with CRUD functionality for creating and managing posts.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">HTML</span>
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">CSS</span>
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            
+            <!-- Projects Table -->
+            <div class="mt-16 bg-white rounded-lg shadow-md overflow-hidden">
+                <div class="p-6 border-b border-gray-200 w-full">
+                    <h2 class="text-2xl font-semibold">Project Details</h2>
+                </div>
+                <div class="overflow-x-auto">
+                    <table class="min-w-full divide-y divide-gray-200">
+                        <thead class="bg-gray-50">
+                            <tr>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Project Name</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Description</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Year</th>
+                            </tr>
+                        </thead>
+                        <tbody class="bg-white divide-y divide-gray-200">
+                            <tr>
+                                <td class="px-6 py-4 whitespace-nowrap">Smorphi Bot</td>
+                                <td class="px-6 py-4">A bot that build as a prototype , which can change its configuration and remotely operatable.</td>
+                                <td class="px-6 py-4 whitespace-nowrap">2025</td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 whitespace-nowrap">Local seva</td>
+                                <td class="px-6 py-4">A website which is used to connect people with the local household service providers.</td>
+                                <td class="px-6 py-4 whitespace-nowrap">2025</td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 whitespace-nowrap">Solar Bot</td>
+                                <td class="px-6 py-4">A bot that helps to clean the solar panel in arid areas </td>
+                                <td class="px-6 py-4 whitespace-nowrap">2025</td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 whitespace-nowrap">Blog Platform (Dummy)</td>
+                                <td class="px-6 py-4">A simple blog platform with CRUD functionality for creating and managing posts.</td>
+                                <td class="px-6 py-4 whitespace-nowrap">2025</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <br>
+            
+            <!-- Skills Lists -->
+            <div class="mt-16 grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h2 class="text-2xl font-semibold mb-4">Technical Skills</h2>
+                    <ol class="list-decimal list-inside space-y-2">
+                        <li>HTML5 & Semantic Markup</li>
+                        <li>Flexbox/Grid Layouts</li>
+                        <li>JavaScript </li>
+                        <li>Responsive Web Design</li>
+                        <li>UI/UX Design Principles</li>
+                        <li>Version Control (Git)</li>
+                    </ol>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h2 class="text-2xl font-semibold mb-4">Tools & Technologies</h2>
+                    <ul class="list-disc list-inside space-y-2">
+                        <li>Visual Studio Code</li>
+                        <li>Tailwind CSS</li>
+                        <li>Figma</li>
+                        <li>Chrome DevTools</li>
+                        <li>GitHub</li>
+                        <li>Netlify</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer (same as index.html) -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4 text-center">
+            <div class="text-2xl font-bold mb-4">Mayank Jatariya</div>
+            <p class="text-gray-400 mb-8">Aspiring AI Developer & Innovator</p>
+            
+            <div class="flex justify-center space-x-6 mb-8">
+                <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                    <i class="fab fa-github text-xl"></i>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                    <i class="fab fa-linkedin-in text-xl"></i>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                    <i class="fab fa-twitter text-xl"></i>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                    <i class="fab fa-instagram text-xl"></i>
+                </a>
+            </div>
+            
+            <p class="text-gray-400 text-sm">© 2025 Mayank Jatariya. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
