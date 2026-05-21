@@ -34,19 +34,23 @@
 
         <section class="section light-section">
             <div class="page-shell contact-layout">
-                <form class="contact-form reveal">
+                <form class="contact-form reveal" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                    <input type="hidden" name="form-name" value="contact">
+                    <p class="hidden-field" aria-hidden="true">
+                        <label>Do not fill this out if you are human: <input name="bot-field"></label>
+                    </p>
                     <div class="form-grid">
                         <div>
                             <label for="name">Full Name *</label>
-                            <input type="text" id="name" placeholder="Your name" required>
+                            <input type="text" id="name" name="name" placeholder="Your name" required>
                         </div>
                         <div>
                             <label for="email">Email Address *</label>
-                            <input type="email" id="email" placeholder="Your email" required>
+                            <input type="email" id="email" name="email" placeholder="Your email" required>
                         </div>
                     </div>
                     <label for="subject">Subject *</label>
-                    <select id="subject" required>
+                    <select id="subject" name="subject" required>
                         <option value="" disabled selected>Select a subject</option>
                         <option value="project">Project Collaboration</option>
                         <option value="freelance">Freelance Opportunity</option>
@@ -54,7 +58,7 @@
                         <option value="other">Other</option>
                     </select>
                     <label for="message">Message *</label>
-                    <textarea id="message" rows="6" placeholder="Your message" required></textarea>
+                    <textarea id="message" name="message" rows="6" placeholder="Your message" required></textarea>
                     <div class="form-actions">
                         <button type="submit" class="btn btn-primary">Send Message</button>
                         <button type="reset" class="btn btn-secondary">Reset Form</button>
@@ -119,8 +123,8 @@
             </div>
             <div>
                 <h3>Connect With Me</h3>
-                <p>Email: mayank.jatariya@example.com</p>
-                <p>Phone: +91 97238 52499</p>
+                <p>Email: mayankjatariya6@gmail.com</p>
+                <p>Phone: +91 97138 42388</p>
             </div>
         </div>
         <div class="page-shell footer-note">

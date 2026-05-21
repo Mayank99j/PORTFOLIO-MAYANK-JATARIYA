@@ -406,7 +406,6 @@ p {
 .contact-form,
 .contact-panel,
 .table-card,
-.audio-card,
 .contact-band {
     border: 1px solid rgba(15, 23, 42, 0.1);
     border-radius: var(--radius);
@@ -460,7 +459,6 @@ p {
 .feature-card h3,
 .project-card h3,
 .list-card h2,
-.audio-card h2,
 .contact-panel h2 {
     color: var(--dark);
     font-size: 1.35rem;
@@ -477,6 +475,7 @@ p {
 
 .project-grid {
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+    align-items: stretch;
 }
 
 .project-grid.two-col {
@@ -485,6 +484,8 @@ p {
 
 .project-card {
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
     transition: transform 240ms ease, box-shadow 240ms ease;
 }
 
@@ -497,6 +498,9 @@ p {
 }
 
 .project-card > div {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
     padding: clamp(22px, 4vw, 26px);
 }
 
@@ -512,7 +516,8 @@ p {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
-    margin-top: 18px;
+    margin-top: auto;
+    padding-top: 18px;
 }
 
 .tag-row span,
@@ -558,6 +563,10 @@ label {
     font-weight: 800;
 }
 
+.hidden-field {
+    display: none;
+}
+
 input,
 textarea,
 select {
@@ -586,7 +595,7 @@ select:focus {
 
 table {
     width: 100%;
-    min-width: min(720px, 180vw);
+    min-width: 680px;
     border-collapse: collapse;
 }
 
@@ -623,22 +632,6 @@ td {
     gap: 12px;
     margin: 18px 0 0;
     padding-left: 20px;
-}
-
-.audio-section {
-    padding-top: 0;
-}
-
-.audio-card {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(260px, 1fr);
-    gap: 22px;
-    align-items: center;
-    padding: clamp(24px, 4vw, 30px);
-}
-
-audio {
-    width: 100%;
 }
 
 .contact-layout {
@@ -767,7 +760,6 @@ audio {
     .hero-grid,
     .split-layout,
     .contact-band,
-    .audio-card,
     .contact-layout,
     .footer-inner,
     .footer-grid {
@@ -796,7 +788,6 @@ audio {
         left: 10px;
     }
 
-    .audio-card,
     .contact-layout,
     .footer-grid,
     .footer-inner {
@@ -872,7 +863,6 @@ audio {
     .contact-band,
     .contact-form,
     .contact-panel,
-    .audio-card,
     .list-card {
         padding: clamp(18px, 6vw, 24px);
     }
@@ -890,6 +880,15 @@ audio {
     .project-card img,
     .project-card video {
         height: clamp(180px, 56vw, 240px);
+    }
+
+    table {
+        min-width: 620px;
+    }
+
+    th,
+    td {
+        padding: 14px 16px;
     }
 
     .info-list article {
